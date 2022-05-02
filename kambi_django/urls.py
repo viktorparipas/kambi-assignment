@@ -26,3 +26,4 @@ handler404 = 'kambi_django.files_listing.views.page_not_found_view'
 handler500 = 'kambi_django.files_listing.views.error_view'
 handler403 = 'kambi_django.files_listing.views.permission_denied_view'
 handler400 = 'kambi_django.files_listing.views.bad_request_view'
+
