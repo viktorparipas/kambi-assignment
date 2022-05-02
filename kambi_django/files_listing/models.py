@@ -36,7 +36,7 @@ def run_ls(folder_name):
 def run_find(folder_name, name, params):
     folder_name = folder_name or '.'
     # Use -- at the end of command to prevent injection attacks
-    command = f"find {folder_name} -maxdepth 1 -type f --"
+    command = f"find {folder_name} -maxdepth 1 -type f--"
     if name:
         # If name is specified, remove any name filter from params
         if params is not None:

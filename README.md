@@ -34,7 +34,7 @@ Run the following command to start the gunicorn server:
 - [x] Error handling
     * [x] Invalid folder: custom message, log
     * [x] No rights to read: custom message, log
-    * [] Invalid URL: custom message, log
+    * [ ] Invalid URL: custom message, log
 - Graceful shutdown
     * [x] Handle all outstanding requests first
     
@@ -46,8 +46,8 @@ Run the following command to start the gunicorn server:
 ### Query parameters
 - `name`: Passed after the test `-name` in the `find` command's expression 
 - `params`: Passed as an expression to the `find` command. The tests -name, -maxdepth and -type are ignored
-    * Example use: `files/files/my_folder?name=*.txt&params=-owner%20me`
-    * translates to `find my_folder -name *.txt -maxdepth 1 -type f -owner me`
+    * Example use: `files/files/my_folder?name=*.txt&params=-atime%2050`
+    * translates to `find my_folder -name "*.txt" -maxdepth 1 -type f-- -atime 50`
 
 ### Limitations
 - Only directories inside the root can be queried
